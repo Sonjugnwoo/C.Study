@@ -1,53 +1,53 @@
-//¹®Á¦ 2 ,ÀÔ·Â¹ŞÀº ÇĞ»ıµéÀÇ ¼ºÀûÀ» ¸·´ë ±×·¡ÇÁ·Î ³ªÅ¸³»´Â ÇÁ·Î±×·¥À» ¸¸µé¾î º¸¼¼¿ä.
+//ë¬¸ì œ 2 ,ì…ë ¥ë°›ì€ í•™ìƒë“¤ì˜ ì„±ì ì„ ë§‰ëŒ€ ê·¸ë˜í”„ë¡œ ë‚˜íƒ€ë‚´ëŠ” í”„ë¡œê·¸ë¨ì„ ë§Œë“¤ì–´ ë³´ì„¸ìš”. (ë²„ë¸”ì •ë ¬)
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #define SIZE 5
 
 int main()
 {
-    int student_score[SIZE];   //  Á¡¼ö ¹è¿­
-    int student_index[SIZE];   // ÇĞ»ı ¹øÈ£(ÀÔ·Â ¼ø¼­) ¹è¿­ 
+    int student_score[SIZE];   //  ì ìˆ˜ ë°°ì—´
+    int student_index[SIZE];   // í•™ìƒ ë²ˆí˜¸(ì…ë ¥ ìˆœì„œ) ë°°ì—´ 
     int i = 0;
-    // Á¡¼ö ÀÔ·Â ¹× À¯È¿¼º °Ë»ç
+    // ì ìˆ˜ ì…ë ¥ ë° ìœ íš¨ì„± ê²€ì‚¬
     while (i != SIZE)
     {
-        printf("%d ¹ø ÇĞ»ı Á¡¼ö ÀÔ·Â : ", i + 1);
+        printf("%d ë²ˆ í•™ìƒ ì ìˆ˜ ì…ë ¥ : ", i + 1);
         scanf("%d", &student_score[i]);
         if (student_score[i] < 0 || student_score[i] > 100)
         {
-            printf("´Ù½ÃÀÔ·Â\n");
+            printf("ë‹¤ì‹œì…ë ¥\n");
             continue;
         }
-        student_index[i] = i + 1;  //ÀÔ·Â ¼ø¼­´ë·Î ÇĞ»ı ¹øÈ£ ÀúÀå
+        student_index[i] = i + 1;  //ì…ë ¥ ìˆœì„œëŒ€ë¡œ í•™ìƒ ë²ˆí˜¸ ì €ì¥
         i++;
     }
 
-    //¹öºí Á¤·Ä·Î ¿À¸§Â÷¼ø Á¤¸®
+    //ë²„ë¸” ì •ë ¬ë¡œ ì˜¤ë¦„ì°¨ìˆœ ì •ë¦¬
     for (int i = 0; i < SIZE; i++)
     {
         for (int j = 0; j < SIZE - 1 - i; j++)
         {
             if (student_score[j] > student_score[j+1])
             {
-                // Á¡¼ö ±³È¯
+                // ì ìˆ˜ êµí™˜
                 int temp = student_score[j];
                 student_score[j] = student_score[j + 1];
                 student_score[j + 1] = temp;
-                // ÇĞ»ı ¹øÈ£(ÀÔ·Â ¼ø¼­ ) ±³È¯
+                // í•™ìƒ ë²ˆí˜¸(ì…ë ¥ ìˆœì„œ ) êµí™˜
                 int index = student_index[j];
                 student_index[j] = student_index[j + 1];
                 student_index[j + 1] = index;
             }
         }
     }
-    // °á°ú Ãâ·Â
-    printf("ÇĞ»ıµéÀÇ ¼ºÀû ³»¸²Â÷¼ø\n");
-    for (int i = SIZE-1; i >=0; i--)  // ¿À¸§Â÷¼ø Á¤¸®Çß±â ‹š¹®¿¡ °Å²Ù·Î Ãâ·Â
+    // ê²°ê³¼ ì¶œë ¥
+    printf("í•™ìƒë“¤ì˜ ì„±ì  ë‚´ë¦¼ì°¨ìˆœ\n");
+    for (int i = SIZE-1; i >=0; i--)  // ì˜¤ë¦„ì°¨ìˆœ ì •ë¦¬í–ˆê¸° Â‹Âšë¬¸ì— ê±°ê¾¸ë¡œ ì¶œë ¥
     {
         printf("\n-----------------------\n");
-        printf("%d ¹ø ÇĞ»ı : %dÁ¡\n", student_index[i], student_score[i]);
+        printf("%d ë²ˆ í•™ìƒ : %dì \n", student_index[i], student_score[i]);
         for (int j = 0; j < student_score[i]; j++)
-            printf("¡á"); // ±×·¡ÇÁ Ãâ·Â
+            printf("â– "); // ê·¸ë˜í”„ ì¶œë ¥
     }
     return 0;
 }
