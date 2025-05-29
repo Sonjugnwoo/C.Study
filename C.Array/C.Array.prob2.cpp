@@ -42,7 +42,7 @@ int main()
     }
     // 결과 출력
     printf("학생들의 성적 내림차순\n");
-    for (int i = SIZE-1; i >=0; i--)  // 오름차순 정리했기 문에 거꾸로 출력
+    for (int i = SIZE-1; i >=0; i--)  // 오름차순 정리 -> 내림차순으로 거꾸로 출력
     {
         printf("\n-----------------------\n");
         printf("%d 번 학생 : %d점\n", student_index[i], student_score[i]);
