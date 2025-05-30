@@ -33,5 +33,17 @@
     <ClCompile Include="C.Func.prob6.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="C.Func.prob7.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C.Func.prob8.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C.Func.prob9.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C.Func.prob10.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
