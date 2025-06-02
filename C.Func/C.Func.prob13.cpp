@@ -1,4 +1,4 @@
-//문제 12 , 1000 자릿수 계산기
+//문제 13 , 1000 자릿수 계산기
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
