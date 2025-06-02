@@ -1,6 +1,6 @@
 ﻿// 문제 1, 두 개의 문자열을 비교하는 함수를 만들어서 같으면 1, 다르면 0 을 리턴
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 
 //함수원형
 int StrEqul(char* str_a, char* str_b);
