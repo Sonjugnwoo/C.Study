@@ -16,6 +16,7 @@ int main()
 	printf("%d\n", Strcmp(str_a, str_b));
 	return 0;
 }
+
 // 두 문자열 비교 직접 구현
 int StrEqul(char* str_a, char* str_b)
 {
@@ -39,6 +40,7 @@ int StrEqul(char* str_a, char* str_b)
 	}
 	return 0;	// 길이가 다르면 0반환
 }
+
 //strcmp 내장함수 사용
 int Strcmp(char* str_a, char* str_b)
 {
